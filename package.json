@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/felipe-miranda-marreiros/clean-ddd-typescript-nodejs#readme",
   "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
     "@types/jest": "^29.0.3",
     "@types/node": "^18.7.18",
     "@types/validator": "^13.7.6",
@@ -42,6 +43,7 @@
     "typescript": "^4.8.3"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "validator": "^13.7.0"
   }
 }
