@@ -24,8 +24,10 @@
   },
   "homepage": "https://github.com/felipe-miranda-marreiros/clean-ddd-typescript-nodejs#readme",
   "devDependencies": {
+    "@shelf/jest-mongodb": "^4.1.0",
     "@types/bcrypt": "^5.0.0",
     "@types/jest": "^29.0.3",
+    "@types/mongodb": "^4.0.7",
     "@types/node": "^18.7.18",
     "@types/validator": "^13.7.6",
     "@typescript-eslint/eslint-plugin": "^5.37.0",
@@ -44,6 +46,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "mongodb": "^4.10.0",
     "validator": "^13.7.0"
   }
 }
