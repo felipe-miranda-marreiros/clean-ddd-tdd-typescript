@@ -1,11 +1,7 @@
-import { serverError, unauthorized } from './../../helpers/http-helper'
-import { InvalidParamError } from './../../errors/invalid-param-error'
-import { EmailValidator } from './../../protocols/email-validator'
-import { MissingParamError } from '../../errors'
-import { badRequest } from '../../helpers/http-helper'
-import { HttpRequest, HttpResponse } from '../../protocols'
+import { HttpRequest, HttpResponse, EmailValidator, Authentication } from './login-protocols'
+import { serverError, unauthorized, badRequest } from './../../helpers/http-helper'
+import { MissingParamError, InvalidParamError } from '../../errors'
 import { Controller } from './../../protocols/controller'
-import { Authentication } from '../../../domain/usecases/authentication'
 
 export class LoginController implements Controller {
   // Dependency Injector via Constructor
