@@ -1,5 +1,5 @@
 import { HttpRequest, HttpResponse, EmailValidator, Authentication } from './login-protocols'
-import { serverError, unauthorized, badRequest } from './../../helpers/http-helper'
+import { serverError, unauthorized, badRequest, ok } from './../../helpers/http-helper'
 import { MissingParamError, InvalidParamError } from '../../errors'
 import { Controller } from './../../protocols/controller'
 
@@ -30,7 +30,7 @@ export class LoginController implements Controller {
       if (!accessToken) {
         return unauthorized()
       }
-      return await new Promise(resolve => resolve({ statusCode: 404, body: { message: 'Not found' } }))
+      return ok({ accessToken })
     } catch (error) {
       return serverError(error)
     }
