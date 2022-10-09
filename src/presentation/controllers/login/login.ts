@@ -1,4 +1,4 @@
-import { serverError } from './../../helpers/http-helper'
+import { serverError, unauthorized } from './../../helpers/http-helper'
 import { InvalidParamError } from './../../errors/invalid-param-error'
 import { EmailValidator } from './../../protocols/email-validator'
 import { MissingParamError } from '../../errors'
@@ -30,7 +30,10 @@ export class LoginController implements Controller {
       if (!isValid) {
         return badRequest(new InvalidParamError('email'))
       }
-      await this.authentication.auth(email, password)
+      const accessToken = await this.authentication.auth(email, password)
+      if (!accessToken) {
+        return unauthorized()
+      }
       return await new Promise(resolve => resolve({ statusCode: 404, body: { message: 'Not found' } }))
     } catch (error) {
       return serverError(error)
