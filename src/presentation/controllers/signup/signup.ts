@@ -1,6 +1,6 @@
 import { Validation } from './../../helpers/validators/validation'
 import { HttpRequest, HttpResponse, Controller, AddAccount } from '../signup/signup-protocols'
-import { badRequest, serverError, ok } from '../../helpers/http-helper'
+import { badRequest, serverError, ok } from '../../helpers/http/http-helper'
 
 export class SignUpController implements Controller {
   // Dependency Injector via Constructor
