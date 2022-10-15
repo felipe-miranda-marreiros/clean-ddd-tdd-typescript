@@ -1,6 +1,6 @@
-import { HttpRequest, HttpResponse, Validation, Authentication } from './login-protocols'
+import { HttpRequest, HttpResponse, Validation, Authentication } from './login-controller-protocols'
 import { serverError, unauthorized, badRequest, ok } from '../../helpers/http/http-helper'
-import { Controller } from './../../protocols/controller'
+import { Controller } from '../../protocols/controller'
 
 export class LoginController implements Controller {
   // Dependency Injector via Constructor

@@ -1,5 +1,5 @@
-import { EmailValidatorAdapter } from './../../../utils/email-validator-adapter'
-import { CompareFieldsValidation, RequiredFieldValidation, ValidationComposite, EmailValidation } from './../../../presentation/helpers/validators'
+import { EmailValidatorAdapter } from '../../../utils/email-validator-adapter'
+import { CompareFieldsValidation, RequiredFieldValidation, ValidationComposite, EmailValidation } from '../../../presentation/helpers/validators'
 import { Validation } from '../../../presentation/protocols/validation'
 
 export const makeSignUpValidation = (): ValidationComposite => {
