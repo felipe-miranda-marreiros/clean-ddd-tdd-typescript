@@ -3,14 +3,10 @@ import { serverError, unauthorized, badRequest, ok } from '../../helpers/http/ht
 import { Controller } from '../../protocols/controller'
 
 export class LoginController implements Controller {
-  // Dependency Injector via Constructor
-  private readonly validation: Validation
-  private readonly authentication: Authentication
-
-  constructor (authentication: Authentication, validation: Validation) {
-    this.validation = validation
-    this.authentication = authentication
-  }
+  constructor (
+    private readonly authentication: Authentication,
+    private readonly validation: Validation
+  ) {}
 
   async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
     try {
