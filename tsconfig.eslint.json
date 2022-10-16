@@ -1,0 +1,11 @@
+{
+  "overrides": [
+    {
+      "parser": "@typescript-eslint/paser",
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      },
+      "exclude": []
+    }
+  ]
+}
