@@ -5,13 +5,8 @@
     "target": "es2019",
     "esModuleInterop": true,
     "strictNullChecks": false,
-    "noUnusedLocals": false
+    "sourceMap": true
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "**/*.spec.ts",
-    "**/*.test.ts",
-  ]
+  "include": ["src"],
+  "exclude": ["**/*.spec.ts", "**/*.test.ts"]
 }
