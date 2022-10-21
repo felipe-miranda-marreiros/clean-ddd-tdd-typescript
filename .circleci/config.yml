@@ -2,7 +2,12 @@ version: 2.1
 orbs:
   coveralls: coveralls/coveralls@1.0.6
 jobs:
-  steps:
+  build:
+    docker:
+      - image: circleci/node:16
+    working_directory: ~/clean-node-api
+    steps:
+      - checkout
       - run: npm install
       # - run: npm test
       - restore_cache:
@@ -14,10 +19,6 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
-      - run: # run eslint
-          name: eslint
-          command: npm run eslint 'src/**'
       - run: # run tests
           name: test
           command: npm run test:coveralls
-    
