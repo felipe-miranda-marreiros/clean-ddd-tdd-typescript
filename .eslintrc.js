@@ -5,6 +5,7 @@ module.exports = {
     tsconfigRootDir: __dirname
   },
   rules: {
-    '@typescript-eslint/strict-boolean-expressions': 'off'
+    '@typescript-eslint/strict-boolean-expressions': 'off',
+    '@typescript-eslint/consistent-type-definitions': 'off'
   }
 }
