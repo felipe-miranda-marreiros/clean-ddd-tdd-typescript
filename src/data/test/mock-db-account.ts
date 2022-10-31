@@ -8,7 +8,7 @@ import { UpdateAccessTokenRepository } from '@/data/protocols/db/account/update-
 export const mockAddAccountRepository = (): AddAccountRepository => {
   class AddAccountRepostioryStub implements AddAccountRepository {
     async add (accountData: AddAccountParams): Promise<AccountModel> {
-      return await new Promise((resolve) => resolve(mockAccountModel()))
+      return await new Promise(resolve => resolve(mockAccountModel()))
     }
   }
   return new AddAccountRepostioryStub()
